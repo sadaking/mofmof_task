@@ -29,5 +29,22 @@
     <%= form.label :備考 %><br>
     <%= form.text_field :remark %>
   </div>
+  <br>
+  <div class="border"></div>
+  <%= form.fields_for :nearest_stations do |nearest_station| %>
+  <h2>最寄り駅 <%= nearest_station.index + 1 %></h2>
+  <div class="route">
+    <%= nearest_station.label :路線名 %><br>
+    <%= nearest_station.text_field :route %>
+  </div>
+  <div class="station">
+    <%= nearest_station.label :駅名 %><br>
+    <%= nearest_station.text_field :station %>
+  </div>
+  <div class="minutes_walk">
+    <%= nearest_station.label :徒歩分数 %><br>
+    <%= nearest_station.text_field :minutes_walk %>分<br>
+  </div>
+  <% end %>
   <%= form.submit '登録する' %>
 <% end %>
