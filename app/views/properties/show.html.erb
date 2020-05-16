@@ -4,7 +4,7 @@
 <p>住所: <%= @property.street_address %></p>
 <p>築年数: <%= @property.age %>年</p>
 <p>備考 <%= @property.remark %></p>
-<div class="border"></div>
+<div class="line"></div>
   <% if @property.nearest_stations.any? %>
     <% @nearest_stations.each_with_index do |nearest_station, i| %>
       <h2>最寄り駅 <%= i + 1 %></h2>
