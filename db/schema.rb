@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 2020_05_15_080523) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string "property_name"
-    t.integer "rent"
-    t.text "street_address"
-    t.integer "age"
+    t.string "property_name", null: false
+    t.integer "rent", null: false
+    t.text "street_address", null: false
+    t.integer "age", null: false
     t.text "remark"
   end
 
